@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление дисков</title>
+</head>
+<body>
+<h1>
+<a href="/">ДОМОЙ
+</a>
+</h1>
+<p>Добавление дисков</p>
+<form method= "POST">
+    {% csrf_token %}
+    <label>Название товара: </label>
+    <input type="text" name = "name"/>
+    <label>Цена товара: </label>
+    <input type="text" name = "cost"/>
+    <label>Название компьютера: </label>
+    <input type="text" name = "computer_id"/>
+<input type="submit" value="Добавить">
+</form>
+</body>
+</html>

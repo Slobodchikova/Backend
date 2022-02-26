@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>РК2</title>
+</head>
+<body>
+<h1>
+<a href="createComp/">Добавление компьютера </a>
+</h1>
+<h1>
+<a href="createDi/">Добавление диска</a>
+</h1>
+<h2> Список Компьютеров </h2>
+<ul>
+    {% for comp in comps %}
+    <li> {{ comp.name }}
+        <br><a href="deleteComp/{{ comp.id }}"> Удалить </a>
+    <br><a href="editComp/{{ comp.id }}"> Изменить </a></li>
+    {% endfor %}
+</ul>
+<h2> Список Дисков </h2>
+<ul>
+    {% for disk in disks %}
+    <li> {{ disk.name }} {{ disk.cost }} {{ disk.computer_id.name }}
+        <br> <a href="deleteDi/{{ disk.id }}"> Удалить </a>
+   <br> <a href="editDi/{{ disk.id }}"> Изменить </a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
